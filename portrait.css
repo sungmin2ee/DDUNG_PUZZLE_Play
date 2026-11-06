@@ -1,0 +1,23 @@
+:root { color-scheme: dark; background: #15151b; font-family: system-ui, sans-serif; }
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+#unity-container {
+  position: fixed; inset: 0; width: 100%; height: 100%; height: 100dvh; display: grid; place-items: center;
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  background: #15151b;
+}
+#unity-player { display: flex; flex-direction: column; flex: none; min-width: 0; min-height: 0; }
+#canvas-wrap { position: relative; width: var(--canvas-width, 0px); height: var(--canvas-height, 0px); flex: none; }
+#unity-canvas { display: block; width: 100%; height: 100%; background: #231f20; touch-action: none; user-select: none; -webkit-user-select: none; outline: none; }
+#unity-footer { height: 36px; flex: none; display: flex; align-items: center; justify-content: space-between; gap: 8px; color: #ddd; font-size: 12px; }
+#unity-footer span { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+#fullscreen { flex: none; font: inherit; min-height: 30px; border: 1px solid #666; border-radius: 4px; padding: 3px 8px; background: #292933; color: white; cursor: pointer; }
+#fullscreen:disabled { opacity: .5; cursor: default; }
+#unity-container:fullscreen { width: 100%; height: 100%; }
+#unity-container:fullscreen #unity-footer { display: none; }
+#loading, #warning { position: absolute; left: 5%; right: 5%; padding: 12px; background: #23232f; color: white; overflow-wrap: anywhere; }
+#loading { top: 45%; text-align: center; }
+#progress { display: block; width: 100%; margin-top: 12px; }
+#warning { top: 5%; max-height: 80%; overflow: auto; }
+[hidden] { display: none !important; }
+@media (max-height: 380px) { #unity-footer { height: 30px; } #fullscreen { min-height: 26px; } }

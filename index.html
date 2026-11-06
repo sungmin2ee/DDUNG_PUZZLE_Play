@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Designer DDUNG</title>
+  <link rel="stylesheet" href="portrait.css">
+</head>
+<body>
+  <main id="unity-container">
+    <section id="unity-player" aria-label="Designer DDUNG">
+      <div id="canvas-wrap">
+        <canvas id="unity-canvas" width="720" height="1280" tabindex="0" aria-label="게임 화면"></canvas>
+        <div id="loading" role="status">불러오는 중 <progress id="progress" max="1" value="0"></progress></div>
+        <div id="warning" role="alert" hidden></div>
+      </div>
+      <footer id="unity-footer"><span>Designer DDUNG</span><button id="fullscreen" type="button" disabled>전체화면</button></footer>
+    </section>
+  </main>
+  <script src="portrait.js"></script>
+  <script src="Build/bd303ce051352c51c9152fb08bf15d26.loader.js"></script>
+  <script>
+    const canvas = document.getElementById('unity-canvas');
+    const warning = document.getElementById('warning');
+    function showBanner(message, type) {
+      const row = document.createElement('div');
+      row.textContent = message;
+      warning.appendChild(row);
+      warning.hidden = false;
+      if (type !== 'error') setTimeout(() => { row.remove(); warning.hidden = !warning.childElementCount; }, 8000);
+    }
+    createUnityInstance(canvas, {
+      arguments: [],
+      dataUrl: 'Build/78704bd5337d97fc07e7cd45d92a46c9.data.unityweb',
+      frameworkUrl: 'Build/30ad772c7381cfd615e372515472d0d7.framework.js.unityweb',
+      codeUrl: 'Build/9b29beb2e4a2a518abfdc3aa197d08fc.wasm.unityweb',
+      streamingAssetsUrl: 'StreamingAssets',
+      companyName: "ziopops",
+      productName: "Designer DDUNG",
+      productVersion: "1.2.1",
+      matchWebGLToCanvasSize: true,
+      showBanner: showBanner
+    }, value => { document.getElementById('progress').value = value; }).then(instance => {
+      document.getElementById('loading').hidden = true;
+      window.DdungPortrait.ready();
+    }).catch(message => {
+      document.getElementById('loading').hidden = true;
+      showBanner(String(message), 'error');
+    });
+  </script>
+</body>
+</html>

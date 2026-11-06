@@ -1,0 +1,45 @@
+{
+  "build_date": "2026-11-06",
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 2204,
+      "sha256": "672c956a9a51ee43ea0d9aaa0f84488340a7b32bb488d40aa6aa92ff068961e0"
+    },
+    {
+      "file": "portrait.css",
+      "bytes": 1879,
+      "sha256": "2d83d168327e123338a7202db71deb201e6f805a0bdec5a034b4812ea25d0c8b"
+    },
+    {
+      "file": "portrait.js",
+      "bytes": 2691,
+      "sha256": "4b8a7617b1c77a268b7c5b7b10f77063643d950dfaabb975330ae141a948643e"
+    },
+    {
+      "file": "Build/30ad772c7381cfd615e372515472d0d7.framework.js.unityweb",
+      "bytes": 81699,
+      "sha256": "7db40e366515c5634ed8bcb322d4faadc0a01c1e67b2e5a8295ff657b00ece91"
+    },
+    {
+      "file": "Build/78704bd5337d97fc07e7cd45d92a46c9.data.unityweb",
+      "bytes": 83511363,
+      "sha256": "2fdc4d7356ed74a7f553177eca39e815bf441b20e1c121fee2eef0206c82d040"
+    },
+    {
+      "file": "Build/9b29beb2e4a2a518abfdc3aa197d08fc.wasm.unityweb",
+      "bytes": 9536056,
+      "sha256": "d664a68e71d7715c9604535d5dbea1bad12302decde94677ee4838b2eadf81fd"
+    },
+    {
+      "file": "Build/bd303ce051352c51c9152fb08bf15d26.loader.js",
+      "bytes": 40555,
+      "sha256": "3fa880ceccbdedbca5bdd2c52d7971b88a19829ca4d7240b9d48d685d0dcc09a"
+    },
+    {
+      "file": "StreamingAssets/google_play_intro.mp4",
+      "bytes": 655102,
+      "sha256": "4010e96a1a95401e9ea19853dd659b6734574b1177858b4c2d736f7a8e3c68be"
+    }
+  ]
+}
